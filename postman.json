@@ -1,0 +1,122 @@
+{
+    "info": {
+      "name": "Auth API Collection",
+      "_postman_id": "12345678-1234-1234-1234-123456789012",
+      "description": "Collection for testing Customer & Admin Registration, Email Verification, and Admin Login.",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Customer Registration",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n    \"first_name\": \"John\",\n    \"last_name\": \"Doe\",\n    \"email\": \"john.doe@example.com\",\n    \"password\": \"password123\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:3000/auth/register/customer",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "3000",
+            "path": [
+              "auth",
+              "register",
+              "customer"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Admin Registration",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n    \"first_name\": \"Admin\",\n    \"last_name\": \"User\",\n    \"email\": \"admin@example.com\",\n    \"password\": \"adminpassword\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:3000/auth/register/admin",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "3000",
+            "path": [
+              "auth",
+              "register",
+              "admin"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Email Verification",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:3000/auth/verify/{{verificationToken}}",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "3000",
+            "path": [
+              "auth",
+              "verify",
+              "{{verificationToken}}"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Admin Login",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n    \"email\": \"admin@example.com\",\n    \"password\": \"adminpassword\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:3000/auth/login/admin",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "3000",
+            "path": [
+              "auth",
+              "login",
+              "admin"
+            ]
+          }
+        },
+        "response": []
+      }
+    ]
+  }
+  
