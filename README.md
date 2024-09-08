@@ -24,11 +24,8 @@ This project provides a Node.js-based user registration and login system with se
     git clone https://github.com/shyamgupta5555/shyamgupta5555-techeruditetask.git
     ```
 
-2. Navigate into the project directory:
+2. Branch master
 
-    ```bash
-    cd main
-    ```
 
 3. Install dependencies:
 
